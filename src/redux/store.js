@@ -1,8 +1,7 @@
 import { combineReducers, createStore} from 'redux';
 import { devToolsEnhancer } from '@redux-devtools/extension';
 import {contactsReducer, filterReducer} from './Contacts/contacts.reducer';
-import persistReducer from 'redux-persist/es/persistReducer';
-import persistStore from 'redux-persist/es/persistStore';
+import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'
 
 const enhancer = devToolsEnhancer();

@@ -3,14 +3,13 @@ import {initialContacts} from './contacts.init-state';
 
 import {FILTER, DELETE_CONTACT, ADD_CONTACT} from './contacts.type';
 
-export const filterReducer = (state = '', {type, payload}) => {
-    switch (type) {
-        case FILTER:
-            return {...state, contacts: payload}
-        default:
-            return state;
-    }
-    
+export const filterReducer = (state = '', { type, payload }) => {
+  switch (type) {
+    case FILTER:
+      return [payload];
+    default:
+      return state;
+  }
 };
 export const contactsReducer = (state = initialContacts, { type, payload }) => {
     switch (type) {

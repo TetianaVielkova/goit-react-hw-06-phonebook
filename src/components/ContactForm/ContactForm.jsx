@@ -26,8 +26,6 @@ export const ContactForm = () => {
           );
         if (nameInArray) {
             alert(`${name} is already in contacts `)
-            setName('');
-            setNumber('');
             return
         } 
         const contact = {name, number, id: nanoid()};
